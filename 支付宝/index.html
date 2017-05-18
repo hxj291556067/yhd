@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>支付宝 知托付！</title>
+	<link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+    <!-- <div class="header">
+        <ul class="header_left">
+            <li><a href="###">个人</a></li>
+            <li><a href="###">企业</a></li>
+            <li><a href="###">开发者</a></li>
+        </ul>
+        <ul class="header_right">
+            <li><a href="###">支付宝APP</a></li>
+            <li>|</li>
+            <li><a href="###">客户服务</a>
+                <ul>
+                    <li><a href="###">服务大厅</a></li>
+                    <li><a href="###">自助服务</a></li>
+                    <li><a href="###">提建议</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div> -->
+    <div id="fullpage">
+        <div class="section section1">
+            <div class="video">
+                <video data-autoplay width="100%">
+                    <source data-src="video/T1T78eXapfXXXXXXXX.mp4">
+                </video>
+            </div>
+            <div class="section1_div">
+                <img src="images/1_1.png" class="img1_1">
+                <div class="div1_1">登录</div>
+                <div class="div1_2">注册</div>
+                <img src="images/ico_play.png" class="img1_2">
+            </div>
+        </div>
+        <div class="section section2">
+            <img src="images/2_1.png" class="img2_1">
+            <img src="images/2_2.png" class="img2_2">
+            <img src="images/2_3.png" class="img2_3">
+            <img src="images/2_4.png" class="img2_4">
+            <img src="images/2_5.png" class="img2_5">
+            <img src="images/2_6.png" class="img2_6">
+        </div>
+        <div class="section section3">
+            <img src="images/3_1.png" class="img3_1">
+            <img src="images/3_2.png" class="img3_2">
+            <img src="images/3_3.png" class="img3_3">
+        </div>
+        <div class="section section4">
+            <img src="images/4_1.png" class="img4_1">
+        </div>
+        <div class="section section5">
+            <div class="zhezao1"></div>
+            <img src="images/5_1.png" class="img5_1">
+        </div>
+        <div class="section section6">
+            <img src="images/6_1.png" class="img6_1">
+        </div>
+        <!-- <div class="section"></div> -->
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                navigation:true,//分页器
+                afterLoad: function(anchorLink, index){
+                    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                    if(index==2){
+                        $(".img2_1").addClass('animated fadeInRight')
+                        $(".img2_2").addClass('animated fadeInRight')
+                        $(".img2_3").addClass('animated fadeInRight')
+                        $(".img2_4").addClass('animated fadeInRight')
+                        $(".img2_5").addClass('animated fadeInRight')
+                        $(".img2_6").addClass('animated fadeInRight')
+                    }else{
+                        $(".img2_1").removeClass('animated fadeInRight')
+                        $(".img2_2").removeClass('animated fadeInRight')
+                        $(".img2_3").removeClass('animated fadeInRight')
+                        $(".img2_4").removeClass('animated fadeInRight')
+                        $(".img2_5").removeClass('animated fadeInRight')
+                        $(".img2_6").removeClass('animated fadeInRight')
+                    }
+                    if(index==3){
+                        $(".img3_1").addClass('animated fadeInRight')
+                        $(".img3_2").addClass('animated fadeInRight')
+                        $(".img3_3").addClass('animated fadeInRight')
+                    }else{
+                        $(".img3_1").removeClass('animated fadeInRight')
+                        $(".img3_2").removeClass('animated fadeInRight')
+                        $(".img3_3").removeClass('animated fadeInRight')
+                    }
+                    if(index==4){
+                         $(".img4_1").addClass('animated fadeInRight')
+                    }else{
+                        $(".img4_1").removeClass('animated fadeInRight')
+                    }
+                    if(index==5){
+                         $(".img5_1").addClass('animated fadeInRight')
+                    }else{
+                        $(".img5_1").removeClass('animated fadeInRight')
+                    }
+                    if(index==6){
+                         $(".img6_1").addClass('animated bounceInLeft')
+                    }else{
+                        $(".img6_1").removeClass('animated bounceInLeft ')
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
